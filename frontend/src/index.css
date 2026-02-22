@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#050A14] text-slate-50 font-sans;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', 'Comic Sans MS', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-common {
+    @apply text-[#4ADE80];
+    text-shadow: 0 0 10px #4ADE80;
+  }
+  .text-rare {
+    @apply text-[#22D3EE];
+    text-shadow: 0 0 15px #22D3EE;
+  }
+  .text-epic {
+    @apply text-[#A855F7];
+    text-shadow: 0 0 20px #A855F7;
+  }
+  .text-legendary {
+    @apply text-[#FACC15];
+    text-shadow: 0 0 25px #FACC15;
+  }
+  .text-mythical {
+    @apply text-[#FF003C];
+    text-shadow: 0 0 30px #FF003C, 0 0 60px #FF003C;
+  }
+  
+  .bg-common {
+    @apply bg-[#4ADE80]/20;
+  }
+  .bg-rare {
+    @apply bg-[#22D3EE]/20;
+  }
+  .bg-epic {
+    @apply bg-[#A855F7]/20;
+  }
+  .bg-legendary {
+    @apply bg-[#FACC15]/20;
+  }
+  .bg-mythical {
+    @apply bg-[#FF003C]/20;
+  }
+  
+  .border-common {
+    @apply border-[#4ADE80]/40;
+  }
+  .border-rare {
+    @apply border-[#22D3EE]/40;
+  }
+  .border-epic {
+    @apply border-[#A855F7]/40;
+  }
+  .border-legendary {
+    @apply border-[#FACC15]/40;
+  }
+  .border-mythical {
+    @apply border-[#FF003C]/40;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-2deg); }
+  75% { transform: translateX(5px) rotate(2deg); }
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-flash {
+  animation: flash 0.3s ease-in-out 3;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
